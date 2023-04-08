@@ -5,6 +5,7 @@ import Home from "../pages/shared/Home/Home";
 import Categories from "../pages/Categories/Categories";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import Products from "../pages/Products/Products";
 const router = createBrowserRouter([
     {
         path:'/',
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
                 path:'/categories',
                 element:<Categories></Categories>,
                 loader:()=>fetch('http://localhost:5000/categories')
+            },
+            {
+                path:'/category/:cat_name',
+                element:<Products></Products>,
+                loader:({params})=>fetch(`http://localhost:5000/categories/${params.cat_name}`)
+               
             },
         ]}
 ])
