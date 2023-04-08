@@ -3,6 +3,7 @@ import Error from "../pages/shared/Error";
 import Main from "../layout/Main";
 import Home from "../pages/shared/Home/Home";
 import Categories from "../pages/Categories/Categories";
+import About from "../pages/About/About";
 const router = createBrowserRouter([
     {
         path:'/',
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path:'/home',
                 element:<Home></Home>
+            },
+            {
+                path:'/about',
+                element:<About></About>
             },
             {
                 path:'/categories',
